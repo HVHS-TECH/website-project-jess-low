@@ -8,12 +8,41 @@
     <link href="style.css" rel="stylesheet2">
     <link href="https://www.w3schools.com/w3css/5/w3.css" rel="stylesheet">
     <style>
-        div.polaroid {
-            text-align: center;
-            width: 210px;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            margin-bottom: 25px;
+        * {
+        box-sizing: border-box;
         }
+        div.gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+        div.gallery-item {
+            margin: 5px;
+            border: 1px solid #ccc;
+            width: calc(25% - 20px);
+        }
+        div.gallery-item:hover {
+            border: 1px solid #777;
+        }
+        div.gallery-item img {
+            width: 100%;
+            height: auto;
+        }
+        div.gallery-item div.desc {
+            padding: 15px;
+            text-align: center;
+        }
+        @media only screen and (max-width: 768px) {
+            div.gallery-item {
+                width: calc(50% - 20px);
+            }
+        }
+        @media only screen and (max-width: 480px) {
+            div.gallery-item {
+                width: calc(100% - 20px);
+            }
+        }
+
         div.container {
             text-align: center;
             padding: 10px 20px;
@@ -23,10 +52,11 @@
     <body>
     <div class="w3-top">
         <div class="w3-bar w3-red">
-            <a href="index.html" class="w3-bar-item w3-button w3-hover-green" style="width:25%">Home</a>
-            <a href="pg1.html" class="w3-bar-item w3-button w3-hover-green" style="width:25%">Link 1</a>
-            <a href="pg2.html" class="w3-bar-item w3-button w3-hover-green" style="width:25%">Link 2</a>
-            <a href="#" class="w3-bar-item w3-button w3-hover-green" style="width:25%">Link 3</a>
+            <a href="index.html" class="w3-bar-item w3-button w3-hover-green" style="width:20%">Home</a>
+            <a href="pg1.html" class="w3-bar-item w3-button w3-hover-green" style="width:20%">Link 1</a>
+            <a href="pg2.html" class="w3-bar-item w3-button w3-hover-green" style="width:20%">Link 2</a>
+            <a href="#" class="w3-bar-item w3-button w3-hover-green" style="width:20%">Link 3</a>
+            <a href="#" class="w3-bar-item w3-button w3-hover-green" style="width:20%">Link 4</a>
         </div>
     </div>
     <br>
@@ -34,22 +64,30 @@
 <div class="w3-container" style="text-align: center;">
 <h1>Diseases</h1>
 <p>More words.</p>
-<div class="polaroid">
-<a href="pg1.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFmkqTnBefO4IpZLNxgMx0_HcG4ZHqmqxq4Q&s" width="210px" alt="placeholder"></a>
+<div class="gallery">
+<div class="gallery-item">
+<a href="pg1.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFmkqTnBefO4IpZLNxgMx0_HcG4ZHqmqxq4Q&s" alt="placeholder"></a>
 <div class="container">
 <p>Disease 1</p>
 </div>
 </div>
-<div class="polaroid">
-<a href="pg2.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFmkqTnBefO4IpZLNxgMx0_HcG4ZHqmqxq4Q&s" width="210px" alt="placeholder"></a>
+<div class="gallery-item">
+<a href="pg2.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFmkqTnBefO4IpZLNxgMx0_HcG4ZHqmqxq4Q&s" alt="placeholder"></a>
 <div class="container">
     <p>Disease 2</p>
 </div>
 </div>
-<div class="polaroid">
-<a target="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFmkqTnBefO4IpZLNxgMx0_HcG4ZHqmqxq4Q&s"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFmkqTnBefO4IpZLNxgMx0_HcG4ZHqmqxq4Q&s" width="210px" alt="placeholder"></a>
+<div class="gallery-item">
+<a target="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFmkqTnBefO4IpZLNxgMx0_HcG4ZHqmqxq4Q&s"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFmkqTnBefO4IpZLNxgMx0_HcG4ZHqmqxq4Q&s" alt="placeholder"></a>
 <div class="container">
     <p>Disease 3</p>
+</div>
+</div>
+<div class="gallery-item">
+<a target="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFmkqTnBefO4IpZLNxgMx0_HcG4ZHqmqxq4Q&s"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFmkqTnBefO4IpZLNxgMx0_HcG4ZHqmqxq4Q&s" alt="placeholder"></a>
+<div class="container">
+    <p>Disease 4</p>
+</div>
 </div>
 </div>
 </div>
