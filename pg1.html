@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    //set width
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Page1 Title</title>
     <link href="style.css" rel="stylesheet">
@@ -15,25 +14,82 @@
         .w3-container div {
             align-items: center;
         }
+        .blurred-image {
+            filter: blur(8px);
+            -webkit-filter: blur(8px);
+            transition: filter 0.3s ease;
+        }
+        .reveal-image {
+            filter: blur(10px);
+            transition: filter 0.5s ease;
+        }
+        .reveal-image:click {
+            filter: blur(0px);
+        }
+        .reveal-image.is-active {
+    filter: blur(0px);
+    visibility: visible;
+}
+
     </style>
     </head>
     <body>
     <div class="w3-top">
         <div class="w3-bar w3-red">
-            <a href="index.html" class="w3-bar-item w3-button w3-hover-green" style="width:25%">Home</a>
-            <a href="pg1.html" class="w3-bar-item w3-button w3-hover-green" style="width:25%">Link 1</a>
-            <a href="pg2.html" class="w3-bar-item w3-button w3-hover-green" style="width:25%">Link 2</a>
-            <a href="#" class="w3-bar-item w3-button w3-hover-green" style="width:25%">Link 3</a>
+            <a href="index.html" class="w3-bar-item w3-button w3-hover-green" style="width:20%">Home</a>
+            <a href="pg1.html" class="w3-bar-item w3-button w3-hover-green w3-hide-small" style="width:20%">Link 1</a>
+            <a href="pg2.html" class="w3-bar-item w3-button w3-hover-green w3-hide-small" style="width:20%">Link 2</a>
+            <a href="#" class="w3-bar-item w3-button w3-hover-green w3-hide-small" style="width:20%">Link 3</a>
+            <a href="#" class="w3-bar-item w3-button w3-hover-green w3-hide-small" style="width:20%">Link 4</a>
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="myFunction()">&#9776;</a>
         </div>
+        <div id="demo" class="w3-bar-block w3-red w3-hide w3-hide-large w3-hide-medium">
+            <a href="pg1.html" class="w3-bar-item w3-button w3-hover-green">Link 1</a>
+            <a href="pg2.html" class="w3-bar-item w3-button w3-hover-green">Link 2</a>
+            <a href="#" class="w3-bar-item w3-button w3-hover-green">Link 3</a>
+            <a href="#" class="w3-bar-item w3-button w3-hover-green">Link 4</a>
     </div>
+    </div>
+    
     <br>
     <br>
-<div class="w3-container">
+<div class="w3-container" style="text-align: center;">
 <div>
-<h1 style="text-align: center;">Disease 1</h1>
-<p style="text-align: center;">WORDS!</p>
+<h1>Disease 1</h1>
+<p>WORDS!</p>
+<div id="blur" class="w3-container">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTia_nfG7Ev1WvZ8CB1PCNyzGa0gDjeJwSjdA&s" onClick="myFunction2()" class="blurred-image" alt="placeholder">
 </div>
 </div>
+</div>
+<!--script-->
+<!--when you click the three lines-->
+<!--find 'demo'-->
+<!--if the list doesn't include 'w3-show', it shows '-1', which means it's missing-->
+<!--if it's missing, add it-->
+<!--if it's there, hide it-->
+<!--script-->
+<!--l-->
+<!--V-->
+<script>
+function myFunction() {
+  var x = document.getElementById("demo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+function myFunction2() {
+    var y = document.getElementById("blur");
+    if (y.className.indexOf("reveal-image") == -1) {
+        y.className += "reveal-image";
+     } else {
+            y.className = y.className.replace("reveal-image", "");
+        
+    }
+}
+</script>
 </body>
 </html>
 

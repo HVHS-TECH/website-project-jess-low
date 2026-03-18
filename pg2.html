@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    //set width
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Page2 Title</title>
     <link href="style.css" rel="stylesheet">
@@ -20,12 +19,21 @@
     <body>
     <div class="w3-top">
         <div class="w3-bar w3-red">
-            <a href="index.html" class="w3-bar-item w3-button w3-hover-green" style="width:25%">Home</a>
-            <a href="pg1.html" class="w3-bar-item w3-button w3-hover-green" style="width:25%">Link 1</a>
-            <a href="pg2.html" class="w3-bar-item w3-button w3-hover-green" style="width:25%">Link 2</a>
-            <a href="#" class="w3-bar-item w3-button w3-hover-green" style="width:25%">Link 3</a>
+            <a href="index.html" class="w3-bar-item w3-button w3-hover-green" style="width:20%">Home</a>
+            <a href="pg1.html" class="w3-bar-item w3-button w3-hover-green w3-hide-small" style="width:20%">Link 1</a>
+            <a href="pg2.html" class="w3-bar-item w3-button w3-hover-green w3-hide-small" style="width:20%">Link 2</a>
+            <a href="#" class="w3-bar-item w3-button w3-hover-green w3-hide-small" style="width:20%">Link 3</a>
+            <a href="#" class="w3-bar-item w3-button w3-hover-green w3-hide-small" style="width:20%">Link 4</a>
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="myFunction()">&#9776;</a>
         </div>
+        <div id="demo" class="w3-bar-block w3-red w3-hide w3-hide-large w3-hide-medium">
+            <a href="pg1.html" class="w3-bar-item w3-button w3-hover-green">Link 1</a>
+            <a href="pg2.html" class="w3-bar-item w3-button w3-hover-green">Link 2</a>
+            <a href="#" class="w3-bar-item w3-button w3-hover-green">Link 3</a>
+            <a href="#" class="w3-bar-item w3-button w3-hover-green">Link 4</a>
     </div>
+    </div>
+    
     <br>
     <br>
 <div class="w3-container">
@@ -34,6 +42,25 @@
 <p style="text-align: center;">something wordy</p>
 </div>
 </div>
+<!--script-->
+<!--when you click the three lines-->
+<!--find 'demo'-->
+<!--if the list doesn't include 'w3-show', it shows '-1', which means it's missing-->
+<!--if it's missing, add it-->
+<!--if it's there, hide it-->
+<!--script-->
+<!--l-->
+<!--V-->
+<script>
+function myFunction() {
+  var x = document.getElementById("demo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
 </body>
 </html>
 
