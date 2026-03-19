@@ -72,10 +72,11 @@ function myFunction() {
 }
 function myFunction2() {
     blurredImage = document.getElementById("blur");
-    if (blurredImage.style.filter = ("blur(10px))){
+    if (blurredImage.style.filter = ("blur(10px)")){
         blurredImage.style.filter = "blur(0px)";
     } else {
-    y.className = y.className.replace(" blurred", "");
+    blurredImage.style.filter = "blur(10px)";
+    }
 }
 }
 </script>
