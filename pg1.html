@@ -73,7 +73,7 @@ function myFunction() {
 function myFunction2() {
     var y = document.getElementById("blur")
     if (y.className.indexOf("blurred") == -1) {
-        y.className += " blurred";
+        blurredImage.style.filter = "blur(0px)";
     } else {
     y.className = y.className.replace(" blurred", "");
 }
