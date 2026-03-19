@@ -19,13 +19,20 @@
             -webkit-filter: blur(8px);
             transition: filter 0.3s ease;
         }
-        .reveal-image {
+        .unblurred {
             filter: blur(0px);
         }
         .reveal-image.is-active {
     filter: blur(0px);
     visibility: visible;
 }
+.blurred {
+  filter: blur(10px);
+  cursor: pointer;
+  transition: filter 0.3s ease; /* Optional smooth transition */
+}
+
+
 
     </style>
     </head>
@@ -54,7 +61,7 @@
 <h1>Disease 1</h1>
 <p>WORDS!</p>
 <div id="blur" class="w3-container" style="text-align: center;">
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTia_nfG7Ev1WvZ8CB1PCNyzGa0gDjeJwSjdA&s" onClick="myFunction2()" class="blurred-image" alt="placeholder">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTia_nfG7Ev1WvZ8CB1PCNyzGa0gDjeJwSjdA&s" onClick="this.classList.toggle('unblurred')" class="blurred" alt="placeholder">
 </div>
 </div>
 </div>
