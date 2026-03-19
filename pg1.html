@@ -15,10 +15,10 @@
             align-items: center;
         }
         .blurred {
-            filter: blur(10px);
+            filter: blur(50px);
         }
         .unblurred {
-            filter: blur(0px);
+            filter: blur(10px);
         }
 
     </style>
@@ -48,8 +48,8 @@
 <h1>Disease 1</h1>
 <p>WORDS!</p>
 </div>
-<div class="w3-container" style="text-align: center;">
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTia_nfG7Ev1WvZ8CB1PCNyzGa0gDjeJwSjdA&s" onclick="myFunction2()" class="blurred" alt="placeholder">
+<div id="blur" class="w3-container" style="text-align: center;">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTia_nfG7Ev1WvZ8CB1PCNyzGa0gDjeJwSjdA&s" onclick="myFunction2()" class="unblurred" alt="placeholder">
 </div>
 </div>
 <!--script-->
@@ -71,7 +71,12 @@ function myFunction() {
   }
 }
 function myFunction2() {
-    y.className = y.className.replace(" unblurred")
+    var y = document.getElementById("blur")
+    if (y.className.indexOf("blurred") == -1) {
+        y.className += " blurred";
+    } else {
+    y.className = y.className.replace(" blurred", "");
+}
 }
 </script>
 </body>
