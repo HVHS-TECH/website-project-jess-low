@@ -14,25 +14,12 @@
         .w3-container div {
             align-items: center;
         }
-        .blurred-image {
-            filter: blur(8px);
-            -webkit-filter: blur(8px);
-            transition: filter 0.3s ease;
+        .blurred {
+            filter: blur(10px);
         }
         .unblurred {
             filter: blur(0px);
         }
-        .reveal-image.is-active {
-    filter: blur(0px);
-    visibility: visible;
-}
-.blurred {
-  filter: blur(10px);
-  cursor: pointer;
-  transition: filter 0.3s ease; /* Optional smooth transition */
-}
-
-
 
     </style>
     </head>
@@ -61,7 +48,7 @@
 <h1>Disease 1</h1>
 <p>WORDS!</p>
 <div id="blur" class="w3-container" style="text-align: center;">
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTia_nfG7Ev1WvZ8CB1PCNyzGa0gDjeJwSjdA&s" onClick="this.classList.toggle('unblurred')" class="blurred" alt="placeholder">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTia_nfG7Ev1WvZ8CB1PCNyzGa0gDjeJwSjdA&s" onClick="this.classList.toggle(unblurred)" class="blurred" alt="placeholder">
 </div>
 </div>
 </div>
@@ -82,15 +69,6 @@ function myFunction() {
   } else { 
     x.className = x.className.replace(" w3-show", "");
   }
-}
-function myFunction2() {
-    var y = document.getElementById("blur");
-    if (y.className.indexOf("reveal-image") == -1) {
-        y.className += " reveal-image";
-     } else {
-            y.className = y.className.replace(" reveal-image", "");
-        
-    }
 }
 </script>
 </body>
