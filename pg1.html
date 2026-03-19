@@ -49,7 +49,7 @@
 <p>WORDS!</p>
 </div>
 <div class="w3-container" style="text-align: center;">
-<img id="blur" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTia_nfG7Ev1WvZ8CB1PCNyzGa0gDjeJwSjdA&s" onclick="myFunction2()" style="filter: blur(10px);" class="unblurred" alt="placeholder">
+<img id="blur" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTia_nfG7Ev1WvZ8CB1PCNyzGa0gDjeJwSjdA&s" onclick="blurAnImage()" style="filter: blur(10px);" class="unblurred" alt="placeholder">
 </div>
 </div>
 <!--script-->
@@ -70,15 +70,15 @@ function myFunction() {
     x.className = x.className.replace(" w3-show", "");
   }
 }
-function myFunction2() {
+function blurAnImage() {
     blurredImage = document.getElementById("blur");
-    if (blurredImage.style.filter == ("blur(10px)")){
-        blurredImage.style.filter += "blur(0px)";
+    if (blurredImage.style.filter == "blur(10px)"){
+        blurredImage.style.filter = "blur(0px)";
     } else {
     blurredImage.style.filter = ("blur(10px)");
     }
 }
-}
+
 </script>
 </body>
 </html>
