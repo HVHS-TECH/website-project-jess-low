@@ -7,6 +7,15 @@
     <link href="style.css" rel="stylesheet2">
     <link href="https://www.w3schools.com/w3css/5/w3.css" rel="stylesheet">
     <style>
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      .dropdown-content {
+        display: none;
+        position: absolute;
+      }
+      .show {display: block;}
         .blurred {
             filter: blur(10px);
         }
@@ -20,6 +29,16 @@
     <div class="w3-top">
         <div class="w3-bar">
             <a href="index.html" class="w3-bar-item w3-orange w3-button w3-hover-green w3-padding-16" style="width:100%">Home</a>
+      <div class="dropdown">
+        <button onclick="search()" class="dropbtn">Search</button>
+        <div id="myDropdown" class="dropdown-content">
+          <input type="text" placeholder="Search..." id="myInput" onkeyup="filterFunction()">
+          <a href="index.html">Home</a>
+          <a href="pg1.html">Disease 1</a>
+          <a href="pg2.html">Disease 2</a>
+          <a href="pg2.html"></a>
+        </div>
+      </div>
             <div class="w3-container w3-red">
             <a href="pg1.html" class="w3-bar-item w3-button w3-hover-green w3-hide-small" style="width:25%">Link 1</a>
             <a href="pg2.html" class="w3-bar-item w3-button w3-hover-green w3-hide-small" style="width:25%">Link 2</a>
@@ -44,8 +63,8 @@
 <h1>Disease 1</h1>
 <p>WORDS!</p>
 </div>
-<div style="width: 40%; left: 30%; right: 30%;">
-<span onclick="this.parentElement.style.display='none';" class="w3-button w3-transparent" style="float: right;">&times;</span><p style="padding:12px; background-color:brown" class="w3-display-container">Warning! This image may have sensitive images. Click at your own risk (or smth)</p>
+<div style="margin: auto; display: table;">
+<p style="width: 250px; padding:12px; background-color:rgb(255, 0, 0)" class="w3-display-container">Warning!<br>Image depicts illness<br>and/or gore.<span onclick="this.parentElement.style.display='none';" class="w3-button w3-transparent w3-display-right">&times;</span></p>
 </div>
 <div style="text-align: center;" class="w3-container">
 <img id="blur" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTia_nfG7Ev1WvZ8CB1PCNyzGa0gDjeJwSjdA&s" onclick="blurAnImage()" style="filter: blur(10px);" class="unblurred" alt="placeholder">
@@ -78,6 +97,23 @@ function blurAnImage() {
     }
 }
 
+        function search() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+        function filterFunction() {
+          const input = document.getElementById("myInput");
+          const filter = input.value.toUpperCase();
+          const div = document.getElementById("myDropdown");
+          const a = div.getElementsByTagName("a");
+          for (let i = 0; i < a.length; i++) {
+            txtValue = a[i].textContent || a[i].innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              a[i].style.display = "";
+            } else {
+              a[i].style.display = "none";
+            }
+          }
+        }
 </script>
 </body>
 </html>
