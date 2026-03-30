@@ -13,7 +13,13 @@
       }
       .dropdown-content {
         display: none;
+        background-color: #ccc;
         position: absolute;
+        min-width: 230px;
+        overflow: auto;
+      }
+      .dropdown-content a {
+        display: block;
       }
       .show {display: block;}
         .blurred {
@@ -27,16 +33,16 @@
     </head>
     <body>
     <div class="w3-top">
-        <div class="w3-bar">
-            <a href="index.html" class="w3-bar-item w3-orange w3-button w3-hover-green w3-padding-16" style="width:100%">Home</a>
-      <div class="dropdown">
-        <button onclick="search()" class="dropbtn">Search</button>
+        <div class="w3-bar w3-orange">
+            <a href="index.html" class="w3-bar-item w3-orange w3-button w3-hover-green w3-padding-16" style="width:80%">Home</a>
+      <div class="dropdown" style="width:20;">
+        <button onclick="search()" class="dropbtn w3-button w3-padding-16 w3-right">Search</button>
         <div id="myDropdown" class="dropdown-content">
           <input type="text" placeholder="Search..." id="myInput" onkeyup="filterFunction()">
           <a href="index.html">Home</a>
           <a href="pg1.html">Disease 1</a>
           <a href="pg2.html">Disease 2</a>
-          <a href="pg2.html"></a>
+          <a href="pg3.html">Disease 3</a>
         </div>
       </div>
             <div class="w3-container w3-red">
