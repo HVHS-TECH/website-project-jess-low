@@ -76,15 +76,13 @@
 <img id="blur" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTia_nfG7Ev1WvZ8CB1PCNyzGa0gDjeJwSjdA&s" onclick="blurAnImage()" style="filter: blur(10px);" class="unblurred" alt="placeholder">
 </div>
 </div>
-<!--script-->
-<!--when you click the three lines-->
-<!--find 'demo'-->
-<!--if the list doesn't include 'w3-show', it shows '-1', which means it's missing-->
-<!--if it's missing, add it-->
-<!--if it's there, hide it-->
-<!--script-->
-<!--l-->
-<!--V-->
+<!--
+when you click the three lines
+find 'demo'
+if the list doesn't include 'w3-show', it shows '-1', which means it's missing
+if it's missing, add it
+if it's there, hide it
+-->
 <script>
 function hamburger() {
   var x = document.getElementById("demo");
@@ -102,10 +100,10 @@ function blurAnImage() {
     blurredImage.style.filter = ("blur(10px)");
     }
 }
-
         function search() {
           document.getElementById("myDropdown").classList.toggle("show");
         }
+        
         function filterFunction() {
           const input = document.getElementById("myInput");
           const filter = input.value.toUpperCase();
@@ -121,6 +119,23 @@ function blurAnImage() {
           }
         }
 </script>
+<!--
+when you click the search button
+find 'myDropdown' and add/remove 'show' class to let people see the dropdown
+-->
+<!--
+when you start searching
+get the input
+turn all case uppercase so it isn't case-sensitive
+get the dropdown list
+find all 'a' links inside the container
+loop through the links
+retrieve the content of the links
+if the search text exists within the links
+make it visible
+if not
+hide it
+-->
 </body>
 </html>
 
