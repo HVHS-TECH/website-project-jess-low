@@ -23,6 +23,16 @@
       .dropdown-content a {
         display: block;
       }
+      .custom-brown {
+        background-color: #5A322B;
+        color: white;
+      }
+      .custom-red {
+        background-color: #330202;
+      }
+      .custom-hover {
+        background-color: #383024;
+      }
       .show {display: block;}
         * {
         box-sizing: border-box;
@@ -67,9 +77,9 @@
     </head>
     <body>
     <div class="w3-top">
-        <div class="w3-bar">
+        <div class="w3-bar custom-brown">
           <a class="w3-left" style="width:25%; text-align: center; font-size: 40px;">💉</a>
-            <a href="index.html" class="w3-bar-item w3-button w3-hover-green w3-padding-16" style="width:50%; color:#5A322B;">Home</a>
+            <a href="index.html" class="w3-bar-item w3-button w3-hover-custom-hover w3-padding-16" style="width:50%;">Home</a>
       <div class="dropdown" style="width:25%;">
         <button onclick="search()" class="dropbtn w3-button w3-padding-16 w3-left"><input type="text" placeholder="Search..." id="myInput" onkeyup="filterFunction()"></button>
         <div id="myDropdown" class="dropdown-content">
@@ -80,7 +90,7 @@
           <a href="pg4.html">Disease 4</a>
         </div>
       </div>
-            <div class="w3-container w3-red">
+            <div class="w3-container custom-red">
             <a href="pg1.html" class="w3-bar-item w3-button w3-hover-green w3-hide-small" style="width:25%">Link 1</a>
             <a href="pg2.html" class="w3-bar-item w3-button w3-hover-green w3-hide-small" style="width:25%">Link 2</a>
             <a href="#" class="w3-bar-item w3-button w3-hover-green w3-hide-small" style="width:25%">Link 3</a>
