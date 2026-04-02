@@ -15,7 +15,8 @@
         display: none;
         background-color: #ccc;
         position: absolute;
-        min-width: 230px;
+        right: 0px;
+        min-width: 100px;
         overflow: auto;
       }
       .dropdown-content a {
@@ -46,23 +47,24 @@
     <body>
     <div class="w3-top">
         <div class="w3-bar custombg">
-            <a href="index.html" class="w3-bar-item custom-brown w3-button w3-padding-16" style="width:80%">Home</a>
-      <div class="dropdown" style="width:20;">
-        <button onclick="search()" class="dropbtn w3-button custom-brown w3-padding-16 w3-right">Search</button>
+          <a class="w3-left" style="width:25%; text-align: center; font-size: 40px;">💉</a>
+            <a href="index.html" class="w3-bar-item w3-button custom-brown custom-hover w3-padding-16" style="width:50%;">Home</a>
+      <div class="dropdown" style="width:25%;">
+        <button onclick="search()" class="dropbtn w3-button custom-brown w3-padding-16 w3-left custom-hover"><input type="text" placeholder="Search..." id="myInput" onkeyup="filterFunction()"></button>
         <div id="myDropdown" class="dropdown-content">
-          <input type="text" placeholder="Search..." id="myInput" onkeyup="filterFunction()">
           <a href="index.html">Home</a>
           <a href="pg1.html">Disease 1</a>
           <a href="pg2.html">Disease 2</a>
           <a href="pg3.html">Disease 3</a>
+          <a href="pg4.html">Disease 4</a>
         </div>
       </div>
-            <div class="w3-container w3-red">
-            <a href="pg1.html" class="w3-bar-item w3-button w3-hover-green w3-hide-small" style="width:25%">Link 1</a>
-            <a href="pg2.html" class="w3-bar-item w3-button w3-hover-green w3-hide-small" style="width:25%">Link 2</a>
-            <a href="#" class="w3-bar-item w3-button w3-hover-green w3-hide-small" style="width:25%">Link 3</a>
-            <a href="#" class="w3-bar-item w3-button w3-hover-green w3-hide-small" style="width:25%">Link 4</a>
-            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-large w3-hide-medium w3-left" onclick="hamburger()">&#9776;</a>
+            <div class="w3-container">
+            <a href="pg1.html" class="w3-bar-item w3-button custom-red w3-hide-small" style="width:25%">Link 1</a>
+            <a href="pg2.html" class="w3-bar-item w3-button custom-red w3-hide-small" style="width:25%">Link 2</a>
+            <a href="#" class="w3-bar-item w3-button custom-red w3-hide-small" style="width:25%">Link 3</a>
+            <a href="#" class="w3-bar-item w3-button custom-red w3-hide-small" style="width:25%">Link 4</a>
+            <a href="javascript:void(0)" class="w3-bar-item custom-red w3-button w3-hide-large w3-hide-medium w3-left" onclick="hamburger()">&#9776;</a>
         </div>
         </div>
         <div id="demo" class="w3-bar-block w3-red w3-hide w3-hide-large w3-hide-medium">
