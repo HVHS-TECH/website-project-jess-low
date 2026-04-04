@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Spanish Flu</title>
+    <title>Influenza</title>
     <link rel="icon" href="https://freesvg.org/img/Virus.png">
     <link href="style.css" rel="stylesheets">
     <link href="https://www.w3schools.com/w3css/5/w3.css" rel="stylesheet">
@@ -61,23 +61,23 @@
         <button onclick="search()" class="dropbtn w3-button custom-brown w3-padding-16 w3-left custom-hover"><input type="text" placeholder="Search..." id="myInput" onkeyup="filterFunction()"></button>
         <div id="myDropdown" class="dropdown-content">
           <a href="index.html">Home</a>
-          <a href="pg1.html">Spanish Flu</a>
-          <a href="pg2.html">Black Death</a>
+          <a href="pg1.html">Influenza</a>
+          <a href="pg2.html">Plague</a>
           <a href="pg3.html">Disease 3</a>
           <a href="pg4.html">Disease 4</a>
         </div>
       </div>
             <div class="w3-container">
-            <a href="pg1.html" class="w3-bar-item w3-button custom-red w3-hide-small" style="width:25%">Spanish Flu</a>
-            <a href="pg2.html" class="w3-bar-item w3-button custom-red w3-hide-small" style="width:25%">Black Death</a>
+            <a href="pg1.html" class="w3-bar-item w3-button custom-red w3-hide-small" style="width:25%">Influenza</a>
+            <a href="pg2.html" class="w3-bar-item w3-button custom-red w3-hide-small" style="width:25%">Plague</a>
             <a href="pg3.html" class="w3-bar-item w3-button custom-red w3-hide-small" style="width:25%">Link 3</a>
             <a href="pg4.html" class="w3-bar-item w3-button custom-red w3-hide-small" style="width:25%">Link 4</a>
             <a href="javascript:void(0)" class="w3-bar-item custom-red w3-button w3-hide-large w3-hide-medium w3-left" onclick="hamburger()">&#9776;</a>
         </div>
         </div>
         <div id="demo" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium">
-            <a href="pg1.html" class="w3-bar-item w3-button custom-red">Spanish Flu</a>
-            <a href="pg2.html" class="w3-bar-item w3-button custom-red">Black Death</a>
+            <a href="pg1.html" class="w3-bar-item w3-button custom-red">Influenza</a>
+            <a href="pg2.html" class="w3-bar-item w3-button custom-red">Plague</a>
             <a href="pg3.html" class="w3-bar-item w3-button custom-red">Link 3</a>
             <a href="pg4.html" class="w3-bar-item w3-button custom-red">Link 4</a>
     </div>
@@ -86,27 +86,29 @@
     <br>
     <br>
     <br>
-<div class="w3-container" style="text-align: center;">
+    <br>
+<div class="w3-container" style="text-align: center; width: 80%; margin: auto;">
 <div>
-<h1>Spanish Flu</h1>
-<p>WORDS!</p>
-</div>
-<div style="margin: auto; display: table;">
-<p style="width: 250px; padding:12px; background-color:rgb(255, 0, 0)" class="w3-display-container">Warning!<br>Image depicts illness<br>and/or gore.<span onclick="this.parentElement.style.display='none';" class="w3-button w3-transparent w3-display-right">&times;</span></p>
-</div>
-<div style="text-align: center;" class="w3-container">
-<img id="blur" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTia_nfG7Ev1WvZ8CB1PCNyzGa0gDjeJwSjdA&s" onclick="blurAnImage()" style="filter: blur(10px);" class="unblurred" alt="placeholder">
+<h1>Influenza</h1>
+<p>Overview:</p>
+<p>Influenza, commonly known as the flu, is an infectious disease. It is often spread by particles created when an infected person coughs, sneezes, talks, or breathes.</p>
+<p>Types:</p>
+<p>There are four main types: A, B, C, and D. Type A infects birds, humans, and some mammals. Type B is a less common strain and mainly infects humans, though it will occasionally infect other creatures. Type C also mainly infects humans and is milder than types A and B. Type D infects pigs and cattle.</p>
+<p>Symptoms:</p>
+<p>Influenza symptoms often include a fever, headache, runny nose, coughing, muscle pain, sore throat and occasionally diarrhoea or vomiting. However, it can be asymptomatic or partially asymptomatic, meaning you either never show symptoms or only show symptoms a few days after catching it. It typically lasts for a few days to a few weeks, but it can progress to pneumonia.</p>
 </div>
 </div>
 <!--Favicon image 'Virus green color' by OpenClipart on freesvg.org is licensed under CC0-->
 
-<!--
-when you click the three lines
-find 'demo'
-if the list doesn't include 'w3-show', it shows '-1', which means it's missing
-if it's missing, add it
-if it's there, hide it
--->
+<!--script-->
+<!--when you click the three lines-->
+<!--find 'demo'-->
+<!--if the list doesn't include 'w3-show', it shows '-1', which means it's missing-->
+<!--if it's missing, add it-->
+<!--if it's there, hide it-->
+<!--script-->
+<!--l-->
+<!--V-->
 <script>
 function hamburger() {
   var x = document.getElementById("demo");
@@ -116,18 +118,9 @@ function hamburger() {
     x.className = x.className.replace(" w3-show", "");
   }
 }
-function blurAnImage() {
-    blurredImage = document.getElementById("blur");
-    if (blurredImage.style.filter == "blur(10px)"){
-        blurredImage.style.filter = "blur(0px)";
-    } else {
-    blurredImage.style.filter = ("blur(10px)");
-    }
-}
         function search() {
           document.getElementById("myDropdown").classList.toggle("show");
         }
-
         function filterFunction() {
           const input = document.getElementById("myInput");
           const filter = input.value.toUpperCase();
