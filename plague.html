@@ -111,10 +111,10 @@
 </div>
 <br>
 <div style="margin: auto; display: table;">
-<p style="width: 250px; padding:12px; background-color:rgb(255, 0, 0)" class="w3-display-container">Warning!<br>Image depicts necrosis<br>and may be.<span onclick="this.parentElement.style.display='none';" class="w3-button w3-transparent w3-display-right">&times;</span></p>
+<p style="width: 250px; padding:12px; background-color:rgb(255, 0, 0)" class="w3-display-container">Warning!<br>Image depicts necrosis<br>and medical gore.<span onclick="this.parentElement.style.display='none';" class="w3-button w3-transparent w3-display-right">&times;</span></p>
 </div>
 <div style="text-align: center;" class="w3-container">
-<img id="blur" src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Hand_necrosis_caused_by_plague.jpg?_=20100119074121" onclick="blurAnImage()" style="filter: blur(10px);" alt="Necrosis">
+<img id="blur" src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Hand_necrosis_caused_by_plague.jpg?_=20100119074121" onclick="blurAnImage()" style="filter: blur(20px);" alt="Necrosis">
 </div>
 </div>
 <!--Favicon image 'Virus green color' by OpenClipart on freesvg.org is licensed under CC0-->
@@ -137,10 +137,10 @@ function hamburger() {
 }
 function blurAnImage() {
     blurredImage = document.getElementById("blur");
-    if (blurredImage.style.filter == "blur(10px)"){
+    if (blurredImage.style.filter == "blur(20px)"){
         blurredImage.style.filter = "blur(0px)";
     } else {
-    blurredImage.style.filter = ("blur(10px)");
+    blurredImage.style.filter = ("blur(20px)");
     }
 }
         function search() {
