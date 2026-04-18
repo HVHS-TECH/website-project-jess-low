@@ -21,8 +21,8 @@
         background-color: #ccc;
         position: absolute;
         right: 0px;
-        min-width: 100px;
-        overflow: auto;
+        width: 100px;
+        overflow: visible;
       }
       .dropdown-content a {
         display: block;
@@ -47,15 +47,54 @@
         color: white  !important;
       }
       .show {display: block;}
+        * {
+        box-sizing: border-box;
+        }
+        div.gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+        div.gallery-item {
+            margin: 5px;
+            border: 1px solid #ccc;
+            width: calc(25% - 20px);
+        }
+        div.gallery-item:hover {
+            border: 1px solid #777;
+        }
+        div.gallery-item img {
+            width: 100%;
+            height: auto;
+        }
+        div.gallery-item div.desc {
+            padding: 15px;
+            text-align: center;
+        }
+        @media only screen and (max-width: 768px) {
+            div.gallery-item {
+                width: calc(50% - 20px);
+            }
+        }
+        @media only screen and (max-width: 480px) {
+            div.gallery-item {
+                width: calc(100% - 20px);
+            }
+        }
+
+        div.container {
+            text-align: center;
+            padding: 10px 20px;
+        }
     </style>
     </head>
     <body>
     <div id="bar" class="w3-top">
         <div class="w3-bar custombg">
-          <a class="w3-left" style="width:25%; text-align: center; font-size: 40px;">💉</a>
-            <a href="index.html" class="w3-bar-item w3-button custom-brown custom-hover w3-padding-16" style="width:50%; font-size: 30px; font-family: Indie Flower;">Home</a>
+          <a class="w3-left" style="width:25%; text-align: center; font-size: 35px;">💉</a>
+            <a href="index.html" class="w3-bar-item w3-button custom-brown custom-hover w3-padding-16" style="width:50%; font-size: 25px; font-family: Indie Flower;">Home</a>
       <div class="dropdown" style="width:25%;">
-        <button onclick="search()" style="font-size: 30px; font-family: Indie Flower;" class="dropbtn w3-button custom-brown w3-padding-16 w3-left custom-hover">Search</button>
+        <button onclick="search()" style="font-size: 25px; font-family: Indie Flower;" class="dropbtn w3-button custom-brown w3-padding-16 w3-left custom-hover">Search</button>
         <div id="myDropdown" class="dropdown-content">
         <input type="text" placeholder="Search..." id="myInput" onkeyup="filterFunction()">
           <a href="index.html" style="font-size: 16px; font-family: Indie Flower;">Home</a>
@@ -117,7 +156,7 @@
 <p style="width: 250px; padding:12px; background-color:rgb(255, 0, 0)" class="w3-display-container">Warning!<br>Image depicts necrosis<br>and medical gore.<span onclick="this.parentElement.style.display='none';" class="w3-button w3-transparent w3-display-right">&times;</span></p>
 </div>
 <div style="text-align: center;" class="w3-container">
-<img id="blur" src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Hand_necrosis_caused_by_plague.jpg?_=20100119074121" onclick="blurAnImage()" style="filter: blur(20px);" alt="Necrosis">
+<img id="blur" src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Hand_necrosis_caused_by_plague.jpg?_=20100119074121" onclick="blurAnImage()" style="filter: blur(20px); width: 70%;" alt="Necrosis">
 <p style="color:#909090; font-size:10px;">'Hand necrosis caused by plague', courtesy of Centers for Disease Control and Prevention's Public Health Image Library on commons.wikimedia.org is licensed under CC0.</p>
 </div>
 </div>
